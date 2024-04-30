@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Berechnung</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Stile für das Ergebnis-Div */
+        #ergebnis {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">BMI Rechner</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="berechnung.html">BMI Berechnung</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Berechnungsseite Inhalt -->
+    <div class="container">
+        <h1>Body-Mass-Index (BMI) Berechnung</h1>
+        <form>
+            <div class="form-group">
+                <label for="gewicht">Gewicht (kg):</label>
+                <input type="number" class="form-control" id="gewicht" placeholder="Gewicht in kg eingeben">
+            </div>
+            <div class="form-group">
+                <label for="groesse">Größe (m):</label>
+                <input type="number" class="form-control" id="groesse" placeholder="Größe in Metern eingeben">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="berechneBMI()">BMI berechnen</button>
+        </form>
+        <!-- Ergebnis-Div -->
+        <div id="ergebnis"></div>
+    </div>
+
+    <!-- Bootstrap JavaScript und jQuery am Ende des <body> Tags einbinden -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- JavaScript für BMI-Berechnung -->
+<script src="bmi_rechner.js"></script>
+</body>
+</html>
